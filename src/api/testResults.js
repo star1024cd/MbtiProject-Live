@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_URL = "https://mbti-project-live-new.vercel.app/testResults";
+const API_URL = "http://localhost:5000/testResults";
 
 export const getTestResults = async () => {
   const response = await axios.get(API_URL);
@@ -12,9 +12,9 @@ export const createTestResult = async (resultData) => {
 };
 
 export const deleteTestResult = async (id) => {
-  axios.delete(`https://mbti-project-live-new.vercel.app/testResults/${id}`);
+  axios.delete(`http://localhost:5000/testResults/${id}`);
 };
 
 export const updateTestResultVisibility = async (id, visibility) => {
-  axios.patch(`https://mbti-project-live-new.vercel.app/testResults/${id}`, { visibility });
+  axios.patch(`http://localhost:5000/testResults/${id}`, { visibility });
 };
