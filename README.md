@@ -12,7 +12,6 @@
 
 <details>
 <summary>폴더구조</summary>
-```
 📦mbti-project
  ┣ 📂public
  ┃ ┗ 📜vite.svg
@@ -55,7 +54,7 @@
  ┣ 📜tailwind.config.js
  ┣ 📜vite.config.js
  ┗ 📜yarn.lock
- ```
+
  </details>
 
 <br/>
