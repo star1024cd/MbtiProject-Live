@@ -14,22 +14,20 @@ export const login = async (userData) => {
 };
 
 export const getUserProfile = async (accessToken) => {
-  const myToken = localStorage.getItem("myToken");
   const response = await axios.get(`${API_URL}/user`, {
     headers: {
       "Content-Type": "application/json",
-      Authorization: `Bearer ${myToken}`,
+      Authorization: `Bearer ${accessToken}`,
     },
   });
   return response.data;
 };
 
 export const updateProfile = async (formData, accessToken) => {
-  const myToken = localStorage.getItem("myToken");
   const response = await axios.patch(`${API_URL}/profile`, formData, {
     headers: {
       "Content-Type": "multipart/form-data",
-      Authorization: `Bearer ${myToken}`,
+      Authorization: `Bearer ${accessToken}`,
     },
   });
 };
