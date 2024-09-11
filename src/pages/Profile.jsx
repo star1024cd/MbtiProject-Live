@@ -8,7 +8,6 @@ const Profile = ({ user, setUser }) => {
   const handleNicknameChange = (e) => {
     setNickname(e.target.value);
   };
-  console.log("유저", user);
 
   const fetchProfile = async () => {
     try {
