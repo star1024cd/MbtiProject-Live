@@ -12,48 +12,49 @@
 
 <details>
 <summary>폴더구조</summary>
+
 📦mbti-project
- ┣ 📂public
- ┃ ┗ 📜vite.svg
- ┣ 📂src
- ┃ ┣ 📂api
- ┃ ┃ ┣ 📜auth.js
- ┃ ┃ ┗ 📜testResults.js
- ┃ ┣ 📂assets
- ┃ ┃ ┗ 📜react.svg
- ┃ ┣ 📂components
- ┃ ┃ ┣ 📜AuthForm.jsx
- ┃ ┃ ┣ 📜Layout.jsx
- ┃ ┃ ┣ 📜ProtectedRoute.jsx
- ┃ ┃ ┣ 📜TestForm.jsx
- ┃ ┃ ┣ 📜TestResultItem.jsx
- ┃ ┃ ┗ 📜TestResultList.jsx
- ┃ ┣ 📂data
- ┃ ┃ ┗ 📜questions.js
- ┃ ┣ 📂pages
- ┃ ┃ ┣ 📜Home.jsx
- ┃ ┃ ┣ 📜Login.jsx
- ┃ ┃ ┣ 📜Profile.jsx
- ┃ ┃ ┣ 📜Signup.jsx
- ┃ ┃ ┣ 📜TestPage.jsx
- ┃ ┃ ┣ 📜TestResultPage.jsx
- ┃ ┃ ┗ 📜TestReultMine.jsx
- ┃ ┣ 📂utils
- ┃ ┃ ┗ 📜mbtiCalculator.jsx
- ┃ ┣ 📜App.css
- ┃ ┣ 📜App.jsx
- ┃ ┣ 📜index.css
- ┃ ┗ 📜main.jsx
- ┣ 📜.gitignore
- ┣ 📜db.json
- ┣ 📜eslint.config.js
- ┣ 📜index.html
- ┣ 📜package.json
- ┣ 📜postcss.config.js
- ┣ 📜README.md
- ┣ 📜tailwind.config.js
- ┣ 📜vite.config.js
- ┗ 📜yarn.lock
+┣ 📂public
+┃ ┗ 📜vite.svg
+┣ 📂src
+┃ ┣ 📂api
+┃ ┃ ┣ 📜auth.js
+┃ ┃ ┗ 📜testResults.js
+┃ ┣ 📂assets
+┃ ┃ ┗ 📜react.svg
+┃ ┣ 📂components
+┃ ┃ ┣ 📜AuthForm.jsx
+┃ ┃ ┣ 📜Layout.jsx
+┃ ┃ ┣ 📜ProtectedRoute.jsx
+┃ ┃ ┣ 📜TestForm.jsx
+┃ ┃ ┣ 📜TestResultItem.jsx
+┃ ┃ ┗ 📜TestResultList.jsx
+┃ ┣ 📂data
+┃ ┃ ┗ 📜questions.js
+┃ ┣ 📂pages
+┃ ┃ ┣ 📜Home.jsx
+┃ ┃ ┣ 📜Login.jsx
+┃ ┃ ┣ 📜Profile.jsx
+┃ ┃ ┣ 📜Signup.jsx
+┃ ┃ ┣ 📜TestPage.jsx
+┃ ┃ ┣ 📜TestResultPage.jsx
+┃ ┃ ┗ 📜TestReultMine.jsx
+┃ ┣ 📂utils
+┃ ┃ ┗ 📜mbtiCalculator.jsx
+┃ ┣ 📜App.css
+┃ ┣ 📜App.jsx
+┃ ┣ 📜index.css
+┃ ┗ 📜main.jsx
+┣ 📜.gitignore
+┣ 📜db.json
+┣ 📜eslint.config.js
+┣ 📜index.html
+┣ 📜package.json
+┣ 📜postcss.config.js
+┣ 📜README.md
+┣ 📜tailwind.config.js
+┣ 📜vite.config.js
+┗ 📜yarn.lock
 
  </details>
 
