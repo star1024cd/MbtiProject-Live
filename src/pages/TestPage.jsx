@@ -10,7 +10,7 @@ const Test = ({ user }) => {
   const handleTestSubmit = async (answers) => {
     const result = calculateMBTI(answers);
     const resultData = {
-      userId: user.id,
+      userId: user.userId,
       nickname: user.nickname,
       result,
       answers,
@@ -19,13 +19,17 @@ const Test = ({ user }) => {
     };
     await createTestResult(resultData);
     alert("테스트완료!");
-    navigate("/results");
+    navigate("/resultMine");
   };
 
   return (
-    <div className="max-w-md mx-auto mt-10">
-      <h1 className="text-2xl font-bold mb-4">MBTI 테스트</h1>
-      <TestForm onSubmit={handleTestSubmit} />
+    <div className="w-full flex flex-col items-center justify-center bg-white shadow-lg rounded-lg p-8">
+      <div className="bg-white max-w-2xl w-full">
+        <h1 className="text-3xl font-bold text-primary-color mb-6 text-center">
+          MBTI 테스트
+        </h1>
+        <TestForm onSubmit={handleTestSubmit} />
+      </div>
     </div>
   );
 };

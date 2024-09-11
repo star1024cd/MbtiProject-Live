@@ -1,10 +1,10 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import {
   deleteTestResult,
   updateTestResultVisibility,
 } from "../api/testResults";
 
-const mbtiDescriptions = {
+export const mbtiDescriptions = {
   ISTJ: "책임감 있고 신뢰할 수 있으며, 전통적이고 실용적인 사고방식을 가지고 있습니다.",
   ISFJ: "헌신적이고 따뜻하며, 사람들의 필요를 잘 이해하고 도와줍니다.",
   INFJ: "이상적이며 통찰력이 뛰어나고, 사람들과의 깊은 관계를 중요시합니다.",
@@ -24,17 +24,24 @@ const mbtiDescriptions = {
 };
 
 export const TestResultItem = ({ result, user, onUpdate, onDelete }) => {
-  const isOwner = result.userId === user.id;
+  const [visibility, setVisibility] = useState(false);
+  const isOwner = result.userId === user.userId;
 
   const formattedDate = new Date(result.date).toLocaleString();
   const description =
     mbtiDescriptions[result.result] || "MBTI 유형 설명을 찾을 수 없습니다.";
 
+  useEffect(() => {
+    onUpdate();
+  }, [result]);
+
   const handleToggleVisibility = async () => {
     try {
       const newVisibility = !result.visibility;
       await updateTestResultVisibility(result.id, newVisibility);
+      // setVisibility(newVisibility);
       onUpdate(); // 부모 컴포넌트에서 결과 목록을 다시 불러오도록 요청
+      alert("전환했습니다.");
     } catch (error) {
       console.error("Visibility toggle failed:", error);
       alert("Visibility toggle failed. Please try again.");

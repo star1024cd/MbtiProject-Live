@@ -11,6 +11,10 @@ export const createTestResult = async (resultData) => {
   await axios.post(API_URL, resultData);
 };
 
-export const deleteTestResult = async (id) => {};
+export const deleteTestResult = async (id) => {
+  axios.delete(`http://localhost:5000/testResults/${id}`);
+};
 
-export const updateTestResultVisibility = async (id, visibility) => {};
+export const updateTestResultVisibility = async (id, visibility) => {
+  axios.patch(`http://localhost:5000/testResults/${id}`, { visibility });
+};

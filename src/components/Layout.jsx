@@ -2,29 +2,70 @@ import { useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 
 // Props 로 꼭 children 만 받을 필요는 없답니다.
-const Layout = ({ children, user }) => {
+const Layout = ({ children, user, setUser }) => {
   const navigate = useNavigate();
 
   // 이곳에서 로그인 하지 않은 사용자를 login 페이지로 보내줄 거에요.
   useEffect(() => {}, []);
 
-  const handleLogout = () => {};
+  const handleLogout = () => {
+    alert("로그아웃이 완료되었습니다. 메인화면으로 이동합니다!");
+    localStorage.removeItem("myToken");
+    setUser(null);
+
+    navigate("/");
+  };
 
   return (
     <div>
       <header>
         <nav>
-          <Link to="/">홈</Link>
-          <div className="space-x-4">
+          <div className="space-x-3  w-full flex justify-end p-4">
             {user ? (
               <>
-                <button onClick={() => navigate("/profile")}>프로필</button>
-                <button onClick={() => navigate("/test")}>테스트</button>
-                <button onClick={() => navigate("/results")}>결과보기</button>
-                <button onClick={handleLogout}>로그아웃</button>
+                <button
+                  className="layoutBtn"
+                  onClick={() => navigate("/profile")}
+                >
+                  프로필
+                </button>
+                <button className="layoutBtn" onClick={() => navigate("/test")}>
+                  테스트
+                </button>
+                <button
+                  className="layoutBtn"
+                  onClick={() => navigate("/resultMine")}
+                >
+                  내결과
+                </button>
+                <button
+                  className="layoutBtn"
+                  onClick={() => navigate("/results")}
+                >
+                  모든결과
+                </button>
+                <button className="layoutBtn" onClick={handleLogout}>
+                  로그아웃
+                </button>
               </>
             ) : (
-              <Link to="/login">로그인</Link>
+              <>
+                <button className="layoutBtn" onClick={() => navigate("/")}>
+                  홈
+                </button>
+                <button
+                  className="layoutBtn"
+                  onClick={() => navigate("/login")}
+                >
+                  로그인
+                </button>
+                <button
+                  className="layoutBtn"
+                  onClick={() => navigate("/signup")}
+                >
+                  회원가입
+                </button>
+              </>
             )}
           </div>
         </nav>
