@@ -23,11 +23,6 @@ const Signup = () => {
           회원가입
         </h1>
         <AuthForm mode="signup" onSubmit={handleSignup} />
-        {/* <div>
-          <p>
-            이미 계정이 있으신가요? <Link to="/login">로그인</Link>
-          </p>
-        </div> */}
       </div>
     </div>
   );
