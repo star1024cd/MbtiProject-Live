@@ -9,7 +9,7 @@
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "json-server": "https://mbti-project-live-new.vercel.app"
+    "json-server": "json-server --watch db.json --port 5000"
   },
   "dependencies": {
     "@tanstack/react-query": "^5.55.4",
