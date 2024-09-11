@@ -1,5 +1,3 @@
-// 그리고 여기에서 중요한 것은 저는 user 를 useState 를 이용해서 App.jsx 에서 상태관리를 해주고, 하위 라우터 혹은 컴포넌트들로 넘겨주고 있는데요. props-drilling 방식이 싫다! 라고 하시면, context 나 zustand 혹은 redux 같은 상태관리 라이브러리를 적극적으로 사용해주세요!
-
 import React, { useState } from "react";
 import {
   BrowserRouter as Router,
