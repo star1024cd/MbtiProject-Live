@@ -8,7 +8,7 @@ const Login = ({ setUser }) => {
   const handleLogin = async (formData) => {
     try {
       const loginData = await login(formData);
-      // localStorage.setItem("myToken", loginData.accessToken);
+      //TODO localStorage.setItem("myToken", loginData.accessToken);
       setUser(loginData);
       alert("로그인에 성공했습니다. 축하해욥.");
       navigate("/");

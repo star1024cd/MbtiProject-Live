@@ -19,6 +19,7 @@ import Profile from "./pages/Profile";
 import TestResultMine from "./pages/TestReultMine";
 import { QueryClient } from "@tanstack/react-query";
 
+//TODO  useContext로 관리하기
 function App() {
   const [user, setUser] = useState(null);
 
